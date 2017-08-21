@@ -78,8 +78,8 @@
         android:layout_below="@id/item"
         android:layout_marginBottom="15dp"
         android:gravity="center"
-        android:text="The user hear the song before he can buy it."
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:text="@string/describe_play"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@color/colorPrimaryDark"
         android:visibility="gone" />
 
@@ -89,8 +89,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/describe_play"
         android:gravity="center"
-        android:text="When user click to this button: The google play will appear to buy this song."
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:text="@string/describe_buy"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@color/colorPrimary"
         android:visibility="gone" />
 
