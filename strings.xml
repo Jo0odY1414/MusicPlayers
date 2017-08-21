@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Music Player</string>
+    <string name="describe_play">The user hear the song before he can buy it.</string>
+    <string name="describe_play_song">User will hear the song once clicked on play icon</string>
+    <string name="describe_buy">When user click buy button: The google play will appear to buy this song.</string>
+</resources>
