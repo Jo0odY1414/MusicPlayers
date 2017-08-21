@@ -7,12 +7,15 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class NowPlayingActivity extends AppCompatActivity {
 
     private MediaPlayer mMediaPlayer;
 
     private AudioManager mAudioManager;
+
+    private TextView describe;
 
     private AudioManager.OnAudioFocusChangeListener mOnAudioFocusChangeListener = new AudioManager.OnAudioFocusChangeListener() {
         @Override
@@ -43,10 +46,13 @@ public class NowPlayingActivity extends AppCompatActivity {
 
         mAudioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
 
+        describe = (TextView) findViewById(R.id.describe);
+
         ImageView stop = (ImageView) findViewById(R.id.stop);
         stop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                describe.setText("Stop playing the song");
                 if (mMediaPlayer != null) {
                     mMediaPlayer.stop();
                     mMediaPlayer.prepareAsync();
@@ -58,6 +64,7 @@ public class NowPlayingActivity extends AppCompatActivity {
         play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                describe.setText("Start playing the song");
                 int result = mAudioManager.requestAudioFocus(mOnAudioFocusChangeListener,
                         AudioManager.STREAM_MUSIC, AudioManager.AUDIOFOCUS_GAIN_TRANSIENT);
 
@@ -79,6 +86,7 @@ public class NowPlayingActivity extends AppCompatActivity {
         pause.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                describe.setText("Pause playing the song");
                 if (mMediaPlayer != null)
                     mMediaPlayer.pause();
             }

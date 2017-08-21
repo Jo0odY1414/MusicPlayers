@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -16,6 +17,8 @@ public class AllSongsActivity extends AppCompatActivity {
     private MediaPlayer mMediaPlayer;
 
     private AudioManager mAudioManager;
+
+    private TextView describePlay;
 
     private AudioManager.OnAudioFocusChangeListener mOnAudioFocusChangeListener = new AudioManager.OnAudioFocusChangeListener() {
         @Override
@@ -59,16 +62,27 @@ public class AllSongsActivity extends AppCompatActivity {
 
         MusicItemAdapter adapter = new MusicItemAdapter(this, musicList, 1);
 
-        ListView listView = (ListView) findViewById(R.id.list);
+        final ListView listView = (ListView) findViewById(R.id.list);
 
         listView.setAdapter(adapter);
+
+        describePlay = new TextView(getApplicationContext());
+
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+
+                listView.removeFooterView(describePlay);
+
                 releaseMediaPlayer();
 
                 MusicItem musicItem = musicList.get(position);
+
+                describePlay.setText(R.string.describe_play_song);
+                describePlay.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+                describePlay.setTextSize(30);
+                listView.addFooterView(describePlay);
 
                 int result = mAudioManager.requestAudioFocus(mOnAudioFocusChangeListener,
                         AudioManager.STREAM_MUSIC, AudioManager.AUDIOFOCUS_GAIN_TRANSIENT);

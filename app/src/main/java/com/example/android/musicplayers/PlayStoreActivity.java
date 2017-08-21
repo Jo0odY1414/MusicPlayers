@@ -58,6 +58,8 @@ public class PlayStoreActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                releaseMediaPlayer();
+
                 describePlay.setVisibility(View.VISIBLE);
                 describeBuy.setVisibility(View.GONE);
 

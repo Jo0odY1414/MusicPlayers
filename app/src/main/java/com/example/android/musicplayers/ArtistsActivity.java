@@ -2,10 +2,9 @@ package com.example.android.musicplayers;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -34,12 +33,10 @@ public class ArtistsActivity extends AppCompatActivity {
 
         listView.setAdapter(adapter);
 
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-                Log.v("onItemClick","onItemClick");
-
-            }
-        });
+        TextView describeBuy = new TextView(getApplicationContext());
+        describeBuy.setText(R.string.describe_buy);
+        describeBuy.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+        describeBuy.setTextSize(30);
+        listView.addFooterView(describeBuy);
     }
 }
