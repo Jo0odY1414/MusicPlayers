@@ -10,11 +10,31 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/trakName"
+        android:id="@+id/now_playing"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:text=" Ed Sheeran - Shape Of You"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Now Playing"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:textColor="@color/colorPrimaryDark" />
+
+    <TextView
+        android:id="@+id/trakNameSong"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Shape Of You"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+    <TextView
+        android:id="@+id/trakNameArtist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="16dp"
+        android:text="Ed Sheeran"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
@@ -39,8 +59,8 @@
         <ImageView
             android:id="@+id/play"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="match_parent"
+            android:layout_weight="1"
             android:src="@drawable/ic_action_play"/>
 
         <ImageView
@@ -49,9 +69,50 @@
             android:layout_height="70dp"
             android:layout_weight="1"
             android:src="@drawable/ic_action_pause" />
-
-
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/describe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/buttons_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_details"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_weight="1"
+            android:text="details" />
+
+        <Button
+            android:id="@+id/button_buy_from_store"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_weight="1"
+            android:text="Go to Play Store" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/describe_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="@string/describe_now_playing"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:visibility="gone" />
 
 
 </LinearLayout>

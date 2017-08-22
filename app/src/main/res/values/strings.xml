@@ -1,3 +1,29 @@
 <resources>
     <string name="app_name">Music Player</string>
+    <string name="describe_play">The user hear the song before he can buy it.</string>
+    <string name="describe_play_song">User will hear the song once clicked on play icon</string>
+    <string name="describe_buy">When user click buy button: The google play will appear to buy this song. if you want to see it click the button bellow</string>
+    <string name="describe_buy_from_play_store">When user click buy button: The google play will appear to buy this song. if you want more details click the button bellow</string>
+    <string name="describe_buy_function">
+        The Android Pay API is part of Google Play Services, so you only need to import the Google Play Services library to get everything you need. Or, you can choose the APIs you want to compile yourself.\n \n
+        To import the entire Google Play Services library, follow these setup instructions.\n
+        If you prefer to selectively compile only the APIs you need, then open the build.gradle file in the app module and add the following to the dependencies block:\n
+        \n
+        dependencies { \n
+            compile \'com.google.android.gms:play-services-wallet:9.4.0\' \n
+            compile \'com.android.support:support-v4:24.1.1\' \n
+            compile \'com.android.support:appcompat-v7:24.1.1\' \n
+        }\n
+        \n
+        Modify your Manifest \n
+
+        To enable Android Pay in your app, you need to add the following Android Pay meta-data to the application tag of your AndroidManifest.xml:\n
+        \n
+            Enables the Android Pay API\n
+            \n
+                android:name="com.google.android.gms.wallet.api.enabled"\n
+                android:value="true"
+    </string>
+    <string name="describe_now_playing">This screen will allowed the user to being played the song and control it by the button above. ^^\n
+    Also, from this screen the user can go to play store to buy this song. </string>
 </resources>

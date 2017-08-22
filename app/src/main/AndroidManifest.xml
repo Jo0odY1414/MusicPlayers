@@ -29,7 +29,7 @@
             android:name=".ArtistsActivity"
             android:label="ARTISTS" />
         <activity android:name=".PlayStoreActivity"
-            android:label="PLAY STORE MUSIC"></activity>
+            android:label="PLAY STORE MUSIC" />
     </application>
 
 </manifest>
