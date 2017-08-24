@@ -32,15 +32,12 @@ public class AlbumActivity extends AppCompatActivity {
 
         MusicItemAdapter adapter = new MusicItemAdapter(this, musicList, 3);
 
+        final TextView nameOfScreen = (TextView) findViewById(R.id.screen_name);
+        nameOfScreen.setText("ALBUM");
+
         ListView listView = (ListView) findViewById(R.id.list);
 
         listView.setAdapter(adapter);
-
-        TextView nameOfScreen = new TextView(getApplicationContext());
-        nameOfScreen.setText("ALBUM");
-        nameOfScreen.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
-        nameOfScreen.setTextSize(50);
-        listView.addHeaderView(nameOfScreen);
 
         TextView describeBuy = new TextView(getApplicationContext());
         describeBuy.setText(R.string.describe_buy);
@@ -58,6 +55,19 @@ public class AlbumActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent playStoreIntent = new Intent(AlbumActivity.this, PlayStoreActivity.class);
                 startActivity(playStoreIntent);
+            }
+        });
+
+        Button mainActivity = new Button(getApplicationContext());
+        mainActivity.setGravity(CENTER_HORIZONTAL);
+        mainActivity.setText("GO TO HOME");
+        listView.addFooterView(mainActivity);
+
+        mainActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent mainActivityIntent = new Intent(AlbumActivity.this, MainActivity.class);
+                startActivity(mainActivityIntent);
             }
         });
     }

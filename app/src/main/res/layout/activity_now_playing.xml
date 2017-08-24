@@ -18,8 +18,8 @@
         android:text="Now Playing"
         android:textAlignment="center"
         android:textAllCaps="true"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-        android:textColor="@color/colorPrimaryDark" />
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="40dp" />
 
     <TextView
         android:id="@+id/trakNameSong"
@@ -88,10 +88,18 @@
         android:orientation="horizontal">
 
         <Button
+            android:id="@+id/button_home"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="2dp"
+            android:layout_weight="1"
+            android:text="HOME" />
+
+        <Button
             android:id="@+id/button_details"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="20dp"
+            android:layout_marginEnd="2dp"
             android:layout_weight="1"
             android:text="details" />
 
@@ -99,9 +107,8 @@
             android:id="@+id/button_buy_from_store"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
             android:layout_weight="1"
-            android:text="Go to Play Store" />
+            android:text="Play Store" />
     </LinearLayout>
 
     <TextView

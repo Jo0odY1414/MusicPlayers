@@ -152,6 +152,16 @@ public class PlayStoreActivity extends AppCompatActivity {
             }
         });
 
+        Button mainActivity = (Button) findViewById(R.id.button_home);
+
+        mainActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent mainActivityIntent = new Intent(PlayStoreActivity.this, MainActivity.class);
+                startActivity(mainActivityIntent);
+            }
+        });
+
     }
 
     @Override

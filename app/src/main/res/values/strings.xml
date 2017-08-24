@@ -26,4 +26,9 @@
     </string>
     <string name="describe_now_playing">This screen will allowed the user to being played the song and control it by the button above. ^^\n
     Also, from this screen the user can go to play store to buy this song. </string>
+    <string name="artists_activity">When user click on this button will go to screen shows albums sorted by the artists name.</string>
+    <string name="album_activity">When user click on this button will go to screen shows the albums.</string>
+    <string name="all_song_activity">When user click on this button will go to screen shows all songs and can play any song.</string>
+    <string name="play_store_activity">When user click on this button will go to screen allowed him to buy the song and listen to it.</string>
+    <string name="now_playing_activity">When user click on this button will go to screen shows song and allowed him to start, pause or stop the song.</string>
 </resources>

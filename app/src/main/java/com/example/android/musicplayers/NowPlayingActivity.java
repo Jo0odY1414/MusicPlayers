@@ -159,7 +159,16 @@ public class NowPlayingActivity extends AppCompatActivity {
                 playStoreIntent.putExtra(EXTRA_IMAGE, image);
                 playStoreIntent.putExtra(EXTRA_SONG, songResourseId);
                 startActivity(playStoreIntent);
+            }
+        });
 
+        Button mainActivity = (Button) findViewById(R.id.button_home);
+
+        mainActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent mainActivityIntent = new Intent(NowPlayingActivity.this, MainActivity.class);
+                startActivity(mainActivityIntent);
             }
         });
     }
