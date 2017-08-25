@@ -19,7 +19,7 @@
             android:textAlignment="center"
             android:textAllCaps="true"
             android:textColor="@color/colorPrimaryDark"
-            android:textSize="40dp" />
+            android:textSize="40sp" />
 
         <LinearLayout
             android:id="@+id/item"

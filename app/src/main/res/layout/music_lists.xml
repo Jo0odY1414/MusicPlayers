@@ -16,7 +16,7 @@
         android:textAlignment="center"
         android:textAllCaps="true"
         android:textColor="@color/colorPrimaryDark"
-        android:textSize="50dp" />
+        android:textSize="50sp" />
 
     <ListView
         android:id="@+id/list"
