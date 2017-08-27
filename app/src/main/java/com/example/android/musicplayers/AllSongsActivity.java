@@ -102,7 +102,7 @@ public class AllSongsActivity extends AppCompatActivity {
 
                 describePlay.setText(R.string.describe_play_song);
                 describePlay.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
-                describePlay.setTextSize(30);
+                describePlay.setTextSize(getResources().getDimension(R.dimen.textSize_describePlay));
                 listView.addFooterView(describePlay);
 
                 nameOfSong = musicItem.getNameSong();

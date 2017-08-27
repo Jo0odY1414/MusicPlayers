@@ -42,7 +42,7 @@ public class ArtistsActivity extends AppCompatActivity {
         TextView describeBuy = new TextView(getApplicationContext());
         describeBuy.setText(R.string.describe_buy);
         describeBuy.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
-        describeBuy.setTextSize(25);
+        describeBuy.setTextSize(getResources().getDimension(R.dimen.textSize_describeBuy));
         listView.addFooterView(describeBuy);
 
         Button playStore = new Button(getApplicationContext());
